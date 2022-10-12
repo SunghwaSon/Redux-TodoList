@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { delete_todo } from "../redux/modules/todos";
 import { isDone_toggle } from "../redux/modules/todos";
-// import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 
 function Todo ({ todo }) {

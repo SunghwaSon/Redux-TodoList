@@ -6,14 +6,15 @@ import styled from 'styled-components';
 const Detail = () => {
   // query params로 받아온 값(id)을 통해 해당 Todo를 골라내야 함.
   const params = useParams()
-  // console.log(params)
+  console.log(params)
   const navigate = useNavigate()
   const select = useSelector((state) => state)
   // console.log('[selector]', selector.todoReducer.todoList);
   const todoList = (select.todoReducer.todoList) // todos의 todoList
   console.log(todoList)
 
-  const todo = todoList.find(todo => todo.id === Number(params.id)) //params의 id와 todoList의 id가 같은 객체를 꺼냄!
+  const todo = todoList.find(todo => todo.id === Number(params.id))  //왜 Numbr? : params를 console로 확인하면 문자열(spring)이다.
+  //params의 id와 todoList의 id가 같은 객체를 꺼냄!
   console.log(todo)
 
   return (
