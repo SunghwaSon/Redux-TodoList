@@ -12,7 +12,7 @@ export const addTodo = (todo) => {
 export const delete_todo = (id) => {
   return {
     type: DELETE,
-    id, //키와 value가 같으면 한번만 쓰면 됨.(id(키): id(value))
+    id, //key와 value가 같으면 한번만 쓰면 됨.(id(key): id(value))
   }
 }
 export const isDone_toggle = (id) => {
@@ -57,6 +57,7 @@ const todos = (state = initialState, action) => {
       return {
         ...state,
         todoList: [...state.todoList.filter((todo) => todo.id !== action.id)]
+        // todoList : state.todoList.filter((todo) => todo.id !== action.id) 도 가능
       } 
       
 

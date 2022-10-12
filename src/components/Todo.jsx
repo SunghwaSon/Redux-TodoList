@@ -6,7 +6,7 @@ import { isDone_toggle } from "../redux/modules/todos";
 import styled from 'styled-components';
 
 function Todo ({ todo }) {
-  const dispatch = useDispatch(); //스토어로 보내고 싶은 행동
+  const dispatch = useDispatch(); //스토어로 보내고 싶은 행동(액션 => 객체)
   // const navigate = useNavigate();
 
   const onRemove = (id) => {
@@ -82,9 +82,11 @@ const Todo_Container = styled.div`
   padding: 12px 24px 24px;
   width: 270px;
 `
+
 const Todo_title = styled.strong`
   font-size: 20px;
 `
+
 const Todo_Content = styled.div`
   margin-top: 20px;
 `

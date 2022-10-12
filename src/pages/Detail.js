@@ -8,7 +8,7 @@ const Detail = () => {
   const params = useParams()
   console.log(params)
   const navigate = useNavigate()
-  const select = useSelector((state) => state)
+  const select = useSelector((state) => state) //store에서 불러옴.
   // console.log('[selector]', selector.todoReducer.todoList);
   const todoList = (select.todoReducer.todoList) // todos의 todoList
   console.log(todoList)
