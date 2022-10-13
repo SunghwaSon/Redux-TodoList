@@ -1,3 +1,4 @@
+//액션 (액션을 변수로!)
 const ADD_TODO = "ADD_TODO";
 const DELETE = "DELETE";
 const TOGGLE = "TOGGLE"
@@ -5,7 +6,7 @@ const TOGGLE = "TOGGLE"
 export const addTodo = (todo) => {
   return {
     type: ADD_TODO,
-    payload: todo, //새로운 todo 값
+    todo, //새로운 todo 값
   }
 }
 
@@ -48,8 +49,8 @@ const todos = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO :
       return { //{}해주는 이유 : initialState가 객체라서 똑같이 해줘야 한다.
-        ...state,
-        todoList : [...state.todoList, action.payload],
+        ...state, //객체의 불변성을 위해! => 쓰지않으면 하나의 key값만 출력...
+        todoList : [...state.todoList, action.todo],
       } 
       
 
@@ -65,7 +66,7 @@ const todos = (state = initialState, action) => {
       return {
         ...state,
         todoList : [...state.todoList.map((todo) => todo.id === action.id? 
-                    {...todo, isDone: !todo.isDone} : todo)]
+                    {...todo, isDone : !todo.isDone} : todo)]
                     //전개연산자를 사용. 원래 값 : 반대값
       } 
       //todoList 배열을 순회하면서

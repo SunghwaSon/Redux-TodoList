@@ -8,7 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element = {<Home />} /> 
       <Route path="/detail/:id" element = {<Detail />} />
-      {/* 동적 라우팅 */}
+      {/* 다이나믹 라우팅 */}
     </Routes>
   );
 }

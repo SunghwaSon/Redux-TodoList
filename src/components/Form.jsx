@@ -9,7 +9,9 @@ const Form = () => {
   const todoInitialState = { title: "", content: "" };
   const [todo, setTodo] = useState(todoInitialState);
     // const [todoList, setTodoList] = useState([])
-  const todoList = useSelector((state) => state.todoReducer.todoList)
+  const todoList = useSelector((state) => state.todoReducer.todoList) 
+  //todoReducer이 모듈의 이름. todos에서 확인. todoReducer안에 todos가 있음!
+  // (state) => state.todoReducer.todoList에서 (스토어 값) => state : 이 state는 모든 모듈을 가져옴(현재는 todos 뿐!) 
   const dispatch = useDispatch(); //스토어로 보내고 싶은 행동
     // 리듀서에서 바뀐 값을 가져오기 위해!
   // console.log("[selectors]", selector);
@@ -39,7 +41,6 @@ const Form = () => {
           <Form_Label>제목</Form_Label>
           <Add_Input
             type="text" 
-            className='add-input'
             name="title" 
             value={todo.title}
             onChange={changeInput}  
@@ -47,7 +48,6 @@ const Form = () => {
           <Form_Label>내용</Form_Label>
           <Add_Input 
             type="text" 
-            className='add-input'
             name="content"
             value={todo.content}
             onChange={changeInput}

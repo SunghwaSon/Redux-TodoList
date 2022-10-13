@@ -14,6 +14,7 @@ root.render(
       <Provider store={store}>
         <App />
       </Provider>
+      {/* // react-redux 라이브러리에 내장되어있는, 리액트 앱에 store 를 손쉽게 연동 할 수 있도록 도와주는 컴포넌트 */}
     </BrowserRouter>
   </React.StrictMode>
 );

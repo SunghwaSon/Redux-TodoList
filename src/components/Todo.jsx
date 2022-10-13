@@ -32,7 +32,8 @@ function Todo ({ todo }) {
           <Button_Set>
             <Todo_Delete_Button onClick={() => onRemove(todo.id)} >삭제하기</Todo_Delete_Button>
             <Todo_Complete_Button onClick={() => onToggle(todo.id)}>
-              {todo.isDone ? "취소" : "완료"}
+              {todo.isDone ? "취소" : "완료"} 
+              {/* //삼향연산자 */}
             </Todo_Complete_Button>
           </Button_Set>
       </Todo_Container>

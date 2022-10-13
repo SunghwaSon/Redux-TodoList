@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Detail = () => {
   // query params로 받아온 값(id)을 통해 해당 Todo를 골라내야 함.
   const params = useParams()
-  console.log(params)
+  console.log(params) // {id:'2'} -> 문자열
   const navigate = useNavigate()
   const select = useSelector((state) => state) //store에서 불러옴.
   // console.log('[selector]', selector.todoReducer.todoList);
