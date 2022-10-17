@@ -7,6 +7,7 @@ const TodoList = () => {
   const { todoReducer } = useSelector((state) => state);
   const todoWorking = todoReducer.todoList.filter((e) => !e.isDone);
   const todoDone = todoReducer.todoList.filter((e) => e.isDone);
+  // (e)는 이벤트에 주로 사용하니, 여기선 사실 e가 아닌 todo가 맞음
   // config에서  ({todoReducer: todos}) 확인.
   // todoReducer 안에 todos가 있으니 (todos에 todoList가 있음)
 
